@@ -1,5 +1,5 @@
 import unittest
-import gdpr
+from gdpr import AnonymizerTransformer
 
 
 class GDPRTests(unittest.TestCase):
@@ -12,7 +12,8 @@ Hi ! My name is John Doe and I want to say that I am very glad to be a customer 
 Patricia, my advisor helps me a lot to choose my products.
 I give you my phone number to call me about my joy : 07 07 07 07 07.
         """
-        anonymized = gdpr.anonymize(text)
+        at = AnonymizerTransformer()
+        anonymized = at.transform(text)
 
         self.assertEqual(anonymized,
         """

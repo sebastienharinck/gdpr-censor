@@ -3,8 +3,11 @@ Aims to anonymize string data for GDPR compliance.
 
 ## Quickstart
 ```python
-import gdpr
-print(gdpr.anonymize("""
+from gdpr import AnonymizerTransformer
+
+at = AnonymizerTransformer()
+
+print(at.transform("""
 Hi ! My name is John Doe and I want to say that I am very glad to be a customer of your store in Paris.
 Patricia, my advisor helps me a lot to choose my products.
 I give you my phone number to call me about my joy : 07 12 34 56 78.

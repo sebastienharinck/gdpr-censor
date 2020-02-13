@@ -1,12 +1,14 @@
 
 
-def anonymize(text):
-    import spacy
-    from spacy.pipeline import Tagger
-    import en_core_web_sm
 
-    nlp = en_core_web_sm.load()
+class AnonymizerTransformer:
+    def transform(self, text):
+        import spacy
+        from spacy.pipeline import Tagger
+        import en_core_web_sm
 
-    doc = nlp(text)
+        nlp = en_core_web_sm.load()
 
-    return " ".join(token.text if token.pos_ != 'PROPN' else token.pos_ for token in doc)
+        doc = nlp(text)
+
+        return " ".join(token.text if token.pos_ != 'PROPN' else token.pos_ for token in doc)
