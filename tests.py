@@ -10,7 +10,7 @@ class GDPRTests(unittest.TestCase):
         text = """
 Hi ! My name is John Doe and I want to say that I am very glad to be a customer of your store in Paris.
 Patricia, my advisor helps me a lot to choose my products.
-I give you my phone number to call me about my joy : 07 86 49 19 63.
+I give you my phone number to call me about my joy : 07 07 07 07 07.
         """
         anonymized = gdpr.anonymize(text)
 
@@ -18,7 +18,7 @@ I give you my phone number to call me about my joy : 07 86 49 19 63.
         """
  Hi ! My name is PROPN PROPN and I want to say that I am very glad to be a customer of your store in PROPN . 
  PROPN , my advisor helps me a lot to choose my products . 
- I give you my phone number to call me about my joy : 07 86 49 19 63 . 
+ I give you my phone number to call me about my joy : 07 07 07 07 07 . 
         """
         )
 
@@ -27,7 +27,7 @@ I give you my phone number to call me about my joy : 07 86 49 19 63.
     #     """
     #     Hi ! My name is John Doe and I want to say that I am very glad to be a customer of your store in Paris.
     #     Patricia, my advisor helps me a lot to choose my products.
-    #     I give you my phone number to call me about my joy : 07 86 49 19 63.
+    #     I give you my phone number to call me about my joy : 07 07 07 07 07.
     #     """
     #     )
 
